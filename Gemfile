@@ -58,7 +58,7 @@ end
 gem 'rspec-rails', group: [ :test ]
 
 gem 'figaro'
-
+gem 'responders', '~> 2.0'
 gem 'cloudinary'
 gem 'carrierwave'
 gem "attachinary"
