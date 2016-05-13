@@ -58,3 +58,8 @@ end
 gem 'rspec-rails', group: [ :test ]
 
 gem 'figaro'
+
+gem 'cloudinary'
+gem 'carrierwave'
+gem "attachinary"
+gem "jquery-fileupload-rails"

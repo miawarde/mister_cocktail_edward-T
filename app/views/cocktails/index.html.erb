@@ -4,13 +4,19 @@
   <%= link_to "Create a cocktail", new_cocktail_path, class: "btn btn-primary" %>
 </div>
 
+<%# if @cocktail.photo? %>
+  <%# cl_image_tag @cocktail.photo.path, width: 700, height: 400, crop: :fill %>
+<%# end %>
+
 <div class="container">
   <div class="row">
     <% @cocktails.each do |cocktail| %>
       <div class="col-xs-12 col-sm-4">
         <div class="card text-center">
-
-          <% if cocktail.picture %>
+          <% if cocktail.photo? %>
+            <div class="card-header" style="background-image: url('<%= cloudinary_url cocktail.photo.path %>')">
+            </div>
+          <% elsif cocktail.picture %>
             <div class="card-header" style="background-image: url('<%= image_path cocktail.picture%>')">
             </div>
           <% else %>
